@@ -561,7 +561,7 @@ header .header-content a {
    align-items: center;
    visibility: visible;
    z-index: 999;
-   background: #4352FF;
+   background: #eee;
 }
 .hide-preloader{
    visibility: hidden;
