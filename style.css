@@ -1,0 +1,987 @@
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+html {
+   font-style: 62.5%;
+   font-family: poppins;
+   scroll-behavior: smooth;
+}
+
+:root {
+   --heading-main: 1.8rem;
+   --heading-small: 1.8rem;
+   --paragraph-main: 1.6rem;
+   --paragraph-small: 1rem;
+   --background-main: #fff;
+   --background-normal: #07004D;
+   --fontFamily: poppins;
+}
+body{
+   overflow-x: hidden;
+}
+
+/**** header part *****/
+
+header {
+   width: 100%;
+   min-height: 100vh;
+   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./Images/pexels-fauxels-3183165.jpg");
+   background-size: cover;
+   background-position: center cover;
+   background-repeat: no-repeat;
+   background: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./Images/pexels-fauxels-3183165.jpg");
+   background: -moz-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./Images/pexels-fauxels-3183165.jpg");
+  
+}
+
+/*** top nav section ***/
+
+.top-nav {
+   width: 100%;
+   height: 8vh;
+   background: var(--background-main);
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   position: fixed;
+   z-index: 1;
+   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+   padding: 2rem;
+  
+}
+.footer-line{
+   height: 1px;
+   width: 80%;
+   background: #fff;
+   text-align: center;
+   position: relative;
+}
+/*** top nav get the logo ***/
+.top-nav .logo img {
+ width: 10rem;
+ height: 3rem;
+}
+/*** top nav get the menu toggle ***/
+
+.top-nav .nav-menu-toggle {
+   background: url("./Images/cancel.png");
+   background-size: 2rem;
+   background-repeat: no-repeat;
+   background-position: center;
+   width: 2rem;
+   height: 2rem;
+   transition: all .3s ease-in-out;
+}
+.nav-menu-toggle.active{
+   background: url("./Images/menu.png");
+   background-size: 2rem;
+   background-repeat: no-repeat;
+   background-position: center;
+   transition: all .3s ease-in-out;
+}
+.top-nav .nav-links {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   top: 8vh;
+   position: absolute;
+   background: var(--background-main);
+   width: 100%;
+   height: 0;
+   visibility: hidden;
+   transition: .1s ease-in-out;
+}
+.top-nav .nav-links.nav-show{
+   height: auto;
+   visibility: visible;
+}
+.top-nav .nav-links li {
+   padding: 2rem;
+   list-style: none;
+}
+
+.top-nav .nav-links li::after{
+   content: "";
+   position: absolute;
+   left: 50%;
+   width: 80%;
+   height: .01rem;
+   margin-top: 3.5rem;
+   background: #222;
+   transform: translate(-50%,-50%);
+}
+.top-nav .nav-links li a {
+   text-decoration: none;
+   color: #222;
+   cursor: pointer;
+   text-transform: uppercase;
+   font-weight: bold;
+   letter-spacing: .1rem;
+}
+.top-nav .nav-links li a:hover{
+   color: #AA5B2E;
+}
+.top-nav .nav-links li a:hover .top-nav .nav-links{
+   display: none;
+}
+/*** header content text section ***/
+
+header .header-content {
+   position: absolute;
+   top: 50%;
+   left: 20%;
+   transform: translate(-20%, -50%);
+}
+
+header .header-content h2 {
+   font-size: 2.5rem;
+   color: var(--background-main);
+   margin-bottom: 1rem;
+   letter-spacing: .1rem;
+}
+
+header .header-content h4 {
+   color: var(--background-main);
+   margin-bottom: 1rem;
+   font-size: 1.2rem;
+   letter-spacing: .1rem;
+}
+
+
+header .header-content a {
+   color: #D2D2D2;
+   background: #2E6E12;
+   padding: .4rem 2rem;
+   text-decoration: none;
+   text-transform: capitalize;
+   border: none;
+   border-radius: .1rem;
+}
+
+/*** other services ***/
+
+.other-services {
+   width: 100%;
+}
+
+.other-services article {
+   width: 90%;
+   margin: 3rem auto;
+   text-align: center;
+   padding: 2rem;
+   border-radius: 1rem;
+   margin: 2rem auto;
+   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.other-services article img {
+   width: 3rem;
+   height: 3rem;
+}
+
+.other-services article h2 {
+   font-size: 1.6rem;
+   margin: 1rem auto;
+   text-transform: capitalize;
+   letter-spacing: .1rem;
+   
+}
+
+.other-services article p {
+   font-size: .9rem;
+   font-weight: bold;
+   line-height: 1.4rem;
+   letter-spacing: .1rem;
+}
+
+/*** brife about about us. ***/
+
+.brife-about {
+   width: 100%;
+   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./Images/programmer.jpg");
+   background-size: cover;
+   background-position: center cover;
+   min-height: 50vh;
+}
+
+.brife-about article {
+   width: 90%;
+   margin: auto;
+   position: relative;
+}
+
+.brife-about article .brife-text {
+   position: absolute;
+   top: 25vh;
+}
+
+.brife-about article h3 {
+   text-align: center;
+   color: #fff;
+   text-transform: capitalize;
+   font-size: .9rem;
+   letter-spacing: .1rem;
+}
+
+/*** end of brife about who we are ***/
+
+.professional-skill {
+   width: 100%;
+   background: var(--background-normal);
+   padding: 2rem 0;
+   color: #fff;
+}
+
+.professional-skill article {
+   width: 90%;
+   margin: 0 auto;
+}
+
+.professional-skill article h2 {
+   font-family: var(--heading-main);
+   margin: 1rem 0;
+   text-transform: capitalize;
+   font-size: 2rem;
+}
+
+.professional-skill article p {
+   line-height: 1.4rem;
+   margin-bottom: 1rem;
+   font-size: .9rem;
+   letter-spacing: .1rem
+}
+.professional-skill article h3{
+   margin: 1rem 0;
+   font-size: 1.4rem;
+}
+.professional-skill article ul {
+   margin: 0 1rem;
+   list-style: circle;
+   line-height: 1.8rem;
+   letter-spacing: .1rem;
+   font-size: .9rem;
+}
+
+
+/*** our main services. ***/
+
+.main-services {
+   width: 100%;
+}
+
+.main-services article {
+   width: 90%;
+   margin: 3rem auto;
+   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+   padding: 2rem;
+   text-align: center;
+   border-radius: 1rem;
+}
+
+.main-services article img {
+   width: 3rem;
+   height: 3rem;
+}
+
+.main-services article h2 {
+   font-size: 1.6rem;
+   margin: 1rem auto;
+   text-transform: capitalize;
+}
+
+.main-services article p {
+   line-height: 1.4rem;
+   letter-spacing: .1rem;
+   font-weight: bold;
+   font-size: .9rem;
+}
+
+/**** daily rataes. ****/
+
+.daily-rates {
+   width: 100%;
+   margin-top: 1rem;
+}
+
+.daily-rates article {
+   width: 90%;
+   margin: 0 auto;
+   position: relative;
+}
+
+.daily-rates article img {
+   width: 100%;
+   height: auto;
+}
+
+.daily-rates article .bac {
+   width: 300px;
+   height: 300px;
+   background: #FFD7DF;
+   border-radius: 50%;
+   position: absolute;
+   top: 0;
+   right: 0;
+   z-index: -2;
+}
+
+
+.daily-rates article .projects {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.projects .project-done {
+   padding: 2rem 0;
+   margin: 2rem auto;
+   text-align: center;
+   width: 60%;
+   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+.projects .project-done h2{
+   margin-bottom: 1rem;
+}
+.projects .project-done p{
+   margin-top: 1rem;
+   letter-spacing: .1rem;
+   font-size: .9rem;
+}
+.projects .project-done img{
+   width: 5rem;
+   height: 5rem;
+}
+
+
+/*** about sections ***/
+
+.about-section{
+   width: 100%;
+}
+.about-section article{
+   width: 90%;
+   margin: 1rem auto;
+}
+.about-section .about-img{
+   background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url("./Images/pexels-energepiccom-159888.jpg");
+   background-size: cover;
+   background-position: center center;
+   background-repeat: no-repeat;
+   height: 40vh;
+}
+.about-section .about-img h2{
+   position: relative;
+   top: 50%;
+   text-align: center;
+   color: #fff;
+   transform: translateY(-50%);
+}
+.about-section .about-text img{
+   width: 10rem;
+   height: 3rem;
+   margin-top: 1rem;
+}
+.about-section .about-text p{
+   font-size: .9rem;
+   letter-spacing: .1rem;
+   font-weight: bold;
+   line-height: 1.4rem;
+   margin: 1rem 0;
+}
+
+/*** reviews section. ***/
+
+.reviews{
+   width: 100%;
+   background: var(--background-normal);
+   padding: 2rem 0;
+}
+.reviews article {
+   width: 90%;
+   margin: auto;
+}
+.reviews article h2{
+   font-size: 2rem;
+   padding: 2rem 0;
+   color: var(--background-main);
+   letter-spacing: .1rem;
+}
+.reviews article p{
+   color: var(--background-main);
+   margin-bottom: 1rem;
+   font-size: .9rem;
+   letter-spacing: .1rem;
+}
+.reviews .art2{
+   background: var(--background-main);
+   color: #222;
+   padding: 2rem;
+   position: relative;
+}
+.reviews .art2 .reviewer h3{
+   font-size: 1rem;
+   text-transform: uppercase;
+   letter-spacing: .1rem;
+}
+.reviews .art2 .btns span{
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   background: #57AA4B;
+   padding: .3rem;
+   color: #fff;
+}
+.btns .next{
+   right: 0;
+   text-align: center;
+}
+.btns .prev{
+   left: 0;
+   text-align: center;
+}
+.btns span img{
+   width: 1.1rem;
+   height: 1.1rem;
+}
+.reviews .art2 p{
+   color: #222;
+   font-size: .9rem;
+   letter-spacing: .1rem;
+}
+.reviews .art2 h3{
+   font-size: 1.6rem;
+}
+.reviews .art2 h4{
+   color: var(--background-normal);
+}
+
+
+/**** our goals in the company ****/
+
+.goals{
+   width: 100%;
+   height: auto;
+   background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("./Images/members-goals.jpg");
+   background-size: cover;
+   background-position: center cover;
+}
+.goals article{
+   width: 90%;
+   margin: auto;
+   padding: 0 0 2rem;
+}
+.goals article h2{
+   color: var(--background-main);
+   font-size: 1.8rem;
+   padding: 2rem 0;
+   text-transform: capitalize;
+   letter-spacing: .1rem;
+}
+.goals article p{
+   color: var(--background-main);
+   font-size: .9rem;
+   letter-spacing: .1rem;
+}
+
+/**** address section.  ,****/
+
+.address{
+   width: 100%;
+   background: var(--background-normal);
+   color: #fff;
+}
+.address article{
+   width: 90%;
+   margin: 0 auto;
+   padding-top: 2rem;
+}
+.address article h2{
+   font-size: 1rem;
+   padding: 1rem 0;
+   text-transform: capitalize;
+   letter-spacing: .1rem;
+   
+}
+.address article p{
+   font-size: .9rem;
+   letter-spacing: .1rem;
+}
+.address article  img{
+   width: 1rem;
+   height: 1rem;
+   filter: invert(1);
+}
+.address article .contact-us{
+   display: flex;
+}
+.address article .contact-us p{
+   margin: 0 1rem;
+   color: #fff;
+   font-weight: bold;
+   text-transform: capitalize;
+   font-size: .7rem;
+   letter-spacing: .1rem;
+}
+.address article .contact-us p a{
+   color: #fff;
+   text-decoration: none;
+   text-transform: lowercase;
+}
+.address .media-links{
+   display: flex;
+   list-style: none; 
+}
+.address .media-links li{
+   margin: 2rem 1rem 2rem 0;
+}
+.address .media-links li a img{
+   width: 1.8rem;
+   height: 1.8rem;
+   filter: invert(0);
+}
+.address .media-links li a:hover{
+   padding: 10px;
+   text-align: center;
+}
+
+/***** preloader section ****/
+
+.preloader{
+   position: fixed;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   display: grid;
+   justify-content: center;
+   align-items: center;
+   visibility: visible;
+   z-index: 999;
+   background: #4352FF;
+}
+.hide-preloader{
+   visibility: hidden;
+   z-index: -999;
+}
+/**** footer section *****/
+
+.bottom-footer{
+   width: 100%;
+   padding: 1rem;
+   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+   background: var(--background-normal);
+}
+.bottom-footer article{
+   width: 90%;
+   margin: auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   color: #fff;
+   text-transform: capitalize;
+}
+
+.bottom-footer article a img{
+   width: 2rem;
+   height: 2rem;
+   z-index: 1;
+   background: #fff;
+   padding: .2rem;
+}
+.show-links{
+  opacity: 1;
+   visibility: visible;
+}
+
+
+/**** starting with the contact page designing *****/
+
+.contact-header{
+      width: 100%;
+   min-height: 60vh;
+   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./Images/pawel-czerwinski--0xCCPIbl3M-unsplash.jpg");
+   background-size: cover;
+   background-position: center cover;
+   background-repeat: no-repeat;
+   background: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./Images/pawel-czerwinski--0xCCPIbl3M-unsplash.jpg");
+   background: -moz-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./Images/pawel-czerwinski--0xCCPIbl3M-unsplash.jpg");
+
+}
+/*** contact head ****/
+.contact-head{
+  text-align: center;
+  position: relative;
+  top: 30vh;
+}
+.contact-head h2{
+   margin-bottom: 1rem;
+   font-size: 2rem;
+   color: #fff;
+   text-transform: capitalize;
+}
+.contact-head a{
+   color: #fff;
+   text-decoration: none;
+   margin: .5rem;
+}
+
+/**** section details contact. ***/
+
+.contact-details{
+   width: 100%;
+   padding: 2rem;
+}
+.contact-details > p{
+   font-weight: bold;
+   margin:1rem 0 3rem 0;
+   letter-spacing: .1rem;
+   font-size: .9rem;
+}
+.contact-details article{
+   width: 90%;
+   margin: 2rem auto;
+   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+   padding: 2rem;
+   border-radius: .2rem;
+   text-align: center;
+}
+.contact-details article img{
+   width: 3rem;
+   height: 3rem;
+}
+.contact-details article p{
+   margin: 1rem 0;
+   line-height: 2rem;
+   font-weight: bold;
+   font-size: .9rem;
+   letter-spacing: .1rem;
+}
+
+/**** Service header section****/
+.Services-header{
+         width: 100%;
+   min-height: 60vh;
+   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./Images/pexels-pixabay-373543.jpg");
+   background-size: cover;
+   background-position: center cover;
+   background-repeat: no-repeat;
+   background: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./Images/pexels-pixabay-373543.jpg");
+   background: -moz-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./Images/pexels-pixabay-373543.jpg");
+}
+
+
+/****** team header section ****/
+
+.team-header{
+            width: 100%;
+   min-height: 60vh;
+   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./Images/programmer.jpg");
+   background-size: cover;
+   background-position: center center;
+   background-repeat: no-repeat;
+   background: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./Images/programmer.jpg");
+   background: -moz-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./Images/programmer.jpg");
+}
+.our-team{
+   width: 100%;
+}
+.our-team article{
+   width: 90%;
+   margin: auto;
+}
+.our-team article .member{
+   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+   position: relative;
+   width: 80%;
+   margin: 2rem auto;
+}
+
+.our-team article .member .member-details{
+   padding: .5rem ;
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   background:#fff;
+   text-align: center;
+}
+.member-details h2{
+   font-size: 1.2rem;
+   margin: 0.2rem 0;
+   text-transform: capitalize;
+   letter-spacing: .1rem;
+}
+.member-details h4{
+   font-size: .8rem;
+   color: #555FCC;
+   margin: .5rem 0;
+   letter-spacing: .1rem;
+   font-size: .9rem;
+}
+.member-details ul{
+   text-align: center;
+}
+.member-details ul li{
+   display: inline-block;
+   margin: .5rem .8rem .5rem 0;
+}
+.member-details ul li img{
+   width: 1.4rem;
+   height: 1.4rem;
+}
+.our-team article img{
+   width: 100%;
+   height: auto;
+}
+
+/* about page **/
+
+.about-header{
+   width: 100%;
+min-height: 60vh;
+   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("./Images/pexels-christina-morillo-1181675.jpg");
+   background-size: cover;
+   background-position: center cover;
+   background-repeat: no-repeat;
+   background: -o-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("./Images/pexels-christina-morillo-1181675.jpg");
+   background: -moz-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("./Images/pexels-christina-morillo-1181675.jpg");
+}
+
+.about-header .header-content{
+   text-align: center;
+   position: relative;
+   top: 30vh;
+}
+.about-container{
+   width: 100%;
+}
+.about-container article{
+   width: 90%;
+   margin: 2rem auto;
+}
+.about-container > h2{
+   margin: 2rem auto;
+   text-transform: capitalize;
+   letter-spacing: .2rem;
+   font-size: 2rem;
+   width: 90%;
+}
+.about-container article p{
+   line-height: 1.6rem;
+   letter-spacing: .1rem;
+   font-weight: bold;
+   margin-bottom: 2rem;
+}
+.skills-bar{
+   margin-top: 2rem;
+}
+.skills-bar li{
+   list-style: none;
+   text-transform: capitalize;
+   font-weight: bold;
+}
+.skills-bar li .bar{
+   margin: 1.5rem 0;
+   display: block;
+   width: 100%;
+   height: 10px;
+   background : #eee;
+   position: relative;
+   border-radius: 20px;
+   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+.skills-bar li .inner-bar{
+   position: absolute;
+   background: #2F2F2F;
+   height: 10px;
+   left: 0;
+   top: 0;
+   bottom: 0;
+   border-radius: 20px;
+}
+.web-development{
+   width: 90%;
+}
+.app-development{
+   width: 80%;
+}
+.digital-marketing{
+   width: 90%;
+}
+.logo{
+   width: 90%;
+}
+.windows{
+   width: 95%;
+}
+/***** media query for the site ****/
+
+@media(min-width: 768px){
+   
+  /** nav menu toggle **/
+   .nav-menu-toggle{
+      display: none;
+   }
+   .top-nav{
+      width: 100%;
+   }
+   /** nav links **/
+  .top-nav .nav-links{
+      position: relative;
+      top: 0;
+      background: none;
+      visibility: visible;
+      justify-content: space-between;
+      width: 70%;
+      padding: 1rem;
+      display: flex;
+      flex-direction: row;
+   }
+   .top-nav .nav-links li{
+      padding: .7rem;
+   }
+   .top-nav .nav-links li::after{
+      content: "";
+      width: 0;
+      height: 0;
+      background: none;
+      position: relative;
+   }
+   
+   /** header content ***/
+  header .header-content{
+      text-align: center;
+      transform: translate(-50% ,-50%);
+      left: 50%;
+      top: 50%;
+      position: absolute;
+   }
+   
+   /** main services **/
+   .main-services{
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: 1fr 1fr;
+   }
+   
+   /* professional skill article */
+   
+   .professional-skill article{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1fr;
+   }
+   /* daily rate **/
+   .daily-rates{
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: 1fr 2fr;
+   }
+   .daily-rates article .bac{
+      width: 200px;
+      height: 200px;
+   }
+   .daily-rates article .projects{
+      display: grid;
+      grid-column-gap: .2rem;
+      grid-template-columns: repeat(4 , 1fr);
+   }
+   .daily-rates article .projects .project-done img{
+      width: 1.5rem;
+      height: 1.5rem;
+   }
+   .daily-rates article .projects .project-done h2{
+      font-size: 1rem;
+   }
+   .daily-rates article .projects .project-done  {
+      padding: 1rem;
+      width: 100%;
+   }
+   
+  /* about section */
+  
+  .about-section{
+     display: grid;
+     grid-gap: 1rem;
+     grid-template-columns: 1fr 1fr;
+     align-items: center;
+  }
+  .about-section .about-img{
+     height: 80%;
+  }
+  
+  /** reviews section **/
+  .reviews{
+     display: grid;
+     grid-gap: 1rem;
+     grid-template-columns: 1fr 1fr;
+     align-items: center;
+  }
+  
+  /** goals **/
+  
+  .goals ,.address{
+     display:  grid;
+     grid-gap: 1rem;
+     grid-template-columns: 1fr 1fr;
+     align-items: center;
+  }
+  .address{
+     padding-bottom: 2rem;
+  }
+  
+  /** our team **/
+  .our-team article .team-members{
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-gap: 1rem;
+  }
+  .contact-details{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+  }
+  
+  /* about section */
+  .about-container{
+     width: 100%;
+  }
+  .about-container article{
+     display: grid;
+     grid-gap: 1rem;
+     grid-template-columns: 1fr 1fr;
+     align-items: center;
+  }
+  .about-container > h2{
+     text-align: center;
+     margin: 3rem 0;
+  }
+}
+@media(min-width:1024px){
+   .main-services{
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: 1fr 1fr 1fr;
+   }
+     /** our team **/
+     .our-team article .team-members {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+     }
+       .contact-details{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1rem;
+  }
+  .other-services-home{
+     display: grid;
+     justify-content: center;
+     align-items: center;
+     grid-template-columns: 1fr 1fr;
+  }
+  
+}
