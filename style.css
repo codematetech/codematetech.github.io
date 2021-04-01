@@ -231,9 +231,9 @@ header .header-content a {
 
 .professional-skill {
    width: 100%;
-   background: var(--background-normal);
+   background: #eee;
    padding: 2rem 0;
-   color: #fff;
+   color: #111;
 }
 
 .professional-skill article {
@@ -372,6 +372,9 @@ header .header-content a {
    background-position: center center;
    background-repeat: no-repeat;
    height: 40vh;
+   background: -o-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./Images/pexels-energepiccom-159888.jpg");
+   background: -moz-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./Images/pexels-energepiccom-159888.jpg");
+ 
 }
 .about-section .about-img h2{
    position: relative;
