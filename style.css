@@ -566,10 +566,7 @@ header .header-content a {
    z-index: 999;
    background: #eee;
 }
-.hide-preloader{
-   visibility: hidden;
-   z-index: -999;
-}
+
 /**** footer section *****/
 
 .bottom-footer{
