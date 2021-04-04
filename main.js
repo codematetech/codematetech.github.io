@@ -93,6 +93,6 @@ const reviews = [
 
 const preloader = document.querySelector('.preloader');
 window.addEventListener('load',function(){
-   preloader.classList.add('hide-preloader');
+   preloader.style.display = "none";
 })
 
