@@ -89,11 +89,10 @@ const reviews = [
        setTimeout(type,250);
      })();
 
-/*** preloader section 
+/*** preloader section ***/
 
 const preloader = document.querySelector('.preloader');
 window.addEventListener('load',function(){
-   preloader.style.display = "none";
-})
-***/
+   preloader.classList.add('hide-preloader');
+});
 
