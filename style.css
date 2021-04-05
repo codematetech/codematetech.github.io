@@ -551,7 +551,7 @@ header .header-content a {
    text-align: center;
 }
 
-/***** preloader section ****/
+/***** preloader section 
 
 .preloader{
    position: fixed;
@@ -569,7 +569,7 @@ header .header-content a {
 .hide-preloader{
 visibility: hidden;
 z-index: -999;
-}
+}***/
 /**** footer section *****/
 
 .bottom-footer{
