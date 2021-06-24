@@ -1,14 +1,15 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 * {
    padding: 0;
    margin: 0;
    box-sizing: border-box;
+   
 }
 
 html {
    font-style: 62.5%;
-   font-family: poppins;
    scroll-behavior: smooth;
+   font-family: 'Open Sans Condensed', sans-serif;
 }
 
 :root {
@@ -18,7 +19,7 @@ html {
    --paragraph-small: 1rem;
    --background-main: #fff;
    --background-normal: #07004D;
-   --fontFamily: poppins;
+   --fontFamily: 'Source Sans Pro', sans-serif;
 }
 body{
    overflow-x: hidden;
@@ -144,7 +145,7 @@ header .header-content h2 {
    letter-spacing: .1rem;
 }
 
-header .header-content h4 {
+header .header-content p {
    color: var(--background-main);
    margin-bottom: 1rem;
    font-size: 1.2rem;
@@ -217,10 +218,13 @@ header .header-content a {
 .brife-about article .brife-text {
    position: absolute;
    top: 25vh;
+   text-align: center;
+   left: 50%;
+   transform: translateX(-50%);
 }
 
 .brife-about article h3 {
-   text-align: center;
+   
    color: #fff;
    text-transform: capitalize;
    font-size: .9rem;
@@ -242,7 +246,6 @@ header .header-content a {
 }
 
 .professional-skill article h2 {
-   font-family: var(--heading-main);
    margin: 1rem 0;
    text-transform: capitalize;
    font-size: 2rem;
@@ -282,9 +285,8 @@ header .header-content a {
    border-radius: 1rem;
 }
 
-.main-services article img {
-   width: 3rem;
-   height: 3rem;
+.main-services article span {
+   font-size: 2rem;
 }
 
 .main-services article h2 {
@@ -313,7 +315,7 @@ header .header-content a {
    position: relative;
 }
 
-.daily-rates article img {
+.daily-rates article img{
    width: 100%;
    height: auto;
 }
@@ -351,9 +353,8 @@ header .header-content a {
    letter-spacing: .1rem;
    font-size: .9rem;
 }
-.projects .project-done img{
-   width: 5rem;
-   height: 5rem;
+.projects .project-done span{
+   font-size: 2rem;
 }
 
 
@@ -446,10 +447,10 @@ header .header-content a {
    left: 0;
    text-align: center;
 }
-.btns span img{
+/* .btns span img{
    width: 1.1rem;
    height: 1.1rem;
-}
+} */
 .reviews .art2 p{
    color: #222;
    font-size: .9rem;
@@ -541,36 +542,6 @@ header .header-content a {
 .address .media-links li{
    margin: 2rem 1rem 2rem 0;
 }
-.address .media-links li a img{
-   width: 1.8rem;
-   height: 1.8rem;
-   filter: invert(0);
-}
-.address .media-links li a:hover{
-   padding: 10px;
-   text-align: center;
-}
-
-/***** preloader section *****/
-
-.preloader{
-   position: fixed;
-   top: 0;
-   left: 0;
-   bottom: 0;
-   right: 0;
-   display: grid;
-   justify-content: center;
-   align-items: center;
-   visibility: visible;
-   z-index: 999;
-   background: #eee;
-}
-.hide-preloader{
-visibility: hidden;
-z-index: -999;
-}
-/**** footer section *****/
 
 .bottom-footer{
    width: 100%;
@@ -588,12 +559,8 @@ z-index: -999;
    text-transform: capitalize;
 }
 
-.bottom-footer article a img{
-   width: 2rem;
-   height: 2rem;
+.bottom-footer article a span{
    z-index: 1;
-   background: #fff;
-   padding: .2rem;
 }
 .show-links{
   opacity: 1;
@@ -652,9 +619,8 @@ z-index: -999;
    border-radius: .2rem;
    text-align: center;
 }
-.contact-details article img{
-   width: 3rem;
-   height: 3rem;
+.contact-details article span{
+  font-size: 2rem;
 }
 .contact-details article p{
    margin: 1rem 0;
@@ -980,6 +946,7 @@ min-height: 60vh;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 1rem;
   }
+
   .other-services-home{
      display: grid;
      justify-content: center;
@@ -987,4 +954,9 @@ min-height: 60vh;
      grid-template-columns: 1fr 1fr;
   }
   
+}
+@media (max-width: 450px) {
+   .contact-details .phone .p{
+      max-width: 50px;
+}
 }
