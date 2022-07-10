@@ -70,32 +70,16 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">About Us</a>
               </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="offcanvasNavbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Dropdown
-                </a>
-                <ul
-                  class="dropdown-menu"
-                  aria-labelledby="offcanvasNavbarDropdown"
-                >
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li>
-                    <hr class="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                </ul>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blogs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -207,17 +191,8 @@
           <img src="./Assets/natana.png" class="card-img-top" alt="natana" />
           <div class="card-body">
             <blockquote class="blockquote mb-0">
-              <p>Natan .L Gibson</p>
-              <footer class="blockquote-footer">Web Developer</footer>
-            </blockquote>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem">
-          <img src="./Assets/natana.png" class="card-img-top" alt="natana" />
-          <div class="card-body">
-            <blockquote class="blockquote mb-0">
-              <p>Natan .L Gibson</p>
-              <footer class="blockquote-footer">Web Developer</footer>
+              <p>Natana .L Gibson</p>
+              <footer class="blockquote-footer">Application Engineer</footer>
             </blockquote>
           </div>
         </div>
@@ -235,35 +210,32 @@
         <div class="col1">
           <form>
             <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label"
-                >Email address</label
-              >
+              <label for="name" class="form-label">Full Name</label>
               <input
-                type="email"
+                type="text"
                 class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="name@example.com"
+                id="name"
+                placeholder="E.g: Logboron Koro"
+                required
               />
             </div>
             <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label"
-                >Email address</label
-              >
+              <label for="email" class="form-label">Email address</label>
               <input
                 type="email"
                 class="form-control"
-                id="exampleFormControlInput1"
+                id="email"
                 placeholder="name@example.com"
+                required
               />
             </div>
             <div class="mb-3">
-              <label for="exampleFormControlTextarea1" class="form-label"
-                >Example textarea</label
-              >
+              <label for="message" class="form-label">Message</label>
               <textarea
                 class="form-control"
-                id="exampleFormControlTextarea1"
+                id="message"
                 rows="3"
+                required
               ></textarea>
             </div>
             <button type="submit" class="btn bg-primary text-white">
@@ -283,6 +255,74 @@
           ></iframe>
         </div>
       </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+      <div class="sub-footer">
+        <div class="col3">
+          <img
+            src="/Assets/codemate.png"
+            alt="codemate-logo"
+            width="150px"
+            height="30px"
+            class="b-logo"
+          />
+          <div>
+            Juba,South Sudan Atlabara
+            <br />
+            Hamia Road
+            <br />
+            Opposite GZ hotel
+            <br />
+            South Sudan Phone: +211 924 608 304
+            <br />
+            Email: codematetechteam@gmail.com
+          </div>
+        </div>
+        <div class="col4">
+          <h4>Userful Links</h4>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Home</li>
+            <li class="list-group-item">About Us</li>
+            <li class="list-group-item">Services</li>
+            <li class="list-group-item">Blogs</li>
+            <li class="list-group-item">Contact Us</li>
+          </ul>
+        </div>
+        <div class="col5">
+          <h4>Our Services</h4>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Web / Mobile App Development</li>
+            <li class="list-group-item">Resume / CV Writting</li>
+            <li class="list-group-item">Windows / Linux Installation</li>
+            <li class="list-group-item">Web/Mobile App Design</li>
+            <li class="list-group-item">Online Business Profile</li>
+          </ul>
+        </div>
+        <div class="col6">
+          <h4>Our Social Networks</h4>
+          <p>You can follow us on social media</p>
+          <div class="media">
+            <li class="list-group-item">
+              <i class="bi bi-facebook icon"></i>
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-instagram icon"></i>
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-twitter icon"></i>
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-telegram icon"></i>
+            </li>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright bg-light">
+      <h6>Design with love by</h6>
+      <div><footer class="blockquote-footer">Codemate Tech</footer></div>
     </div>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <!-- JavaScript Bundle with Popper -->
